@@ -1,0 +1,20 @@
+﻿@model Vidly.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<div>
+  
+    <hr />
+   <b>MemberShipType : </b>  @Model.MemberShipType.Name<br />
+    @if (Model.Birthdate != null)
+    {
+        <span><b>Birthdate : </b> </span><span>@Model.Birthdate</span>
+    }
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,31 @@
+﻿@model Vidly.Models.MovieViewModel
+@{
+    ViewBag.Title = "Random";
+}
+
+
+<h2>@Model.movie.Name</h2>
+<div style="display:flex">
+<div style="float:left;width:400PX">
+    <ul>
+        @foreach(var c in Model.customers)
+        {
+            <li>
+                @c.Id
+            </li>
+        }
+    </ul>
+</div>
+
+<div >
+    <ul>
+        @foreach (var c in Model.customers)
+        {
+            <li>
+                @c.Name
+            </li>
+        }
+    </ul>
+</div>
+    </div>
+
